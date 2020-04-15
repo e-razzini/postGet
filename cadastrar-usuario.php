@@ -12,6 +12,7 @@ $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
     <title>Document</title>
 </head>
 <body>
+  
     <div class="formulario">
 
             <form method="post" action="">
@@ -34,9 +35,9 @@ $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
             <p> <?php  echo $data['password'];?> </p>
 
             <label for="password-Confirm">password Confirm</label>
-           <p> <?php  echo $data['Confirm'];?> </p>
+           <p> <?php  echo $data['password-Confirm'];?> </p>
 
-            <button type="submit" name="salvar" id="salvar">ok</button>
+            <button type="submit" name="salvar" id="salvar" >ok</button>
 
         </form>
         </div>

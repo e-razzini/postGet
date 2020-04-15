@@ -1,5 +1,4 @@
 /*fonts */
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
@@ -10,65 +9,67 @@
     box-sizing: border-box;    
 }
 body {
-    background-color: #212121;
+    background-color:#1A237E;
     padding:0px ;
     margin: 0px;
     box-sizing: border-box;
 }
-.container {
-    position: relative;
-}
+
 .formulario {
     position: absolute;
     width: 400px;
     height:auto;    
-    background-color:rgb(18, 22, 24);
+    background-color:#0D47A1;
     left:50%;
     transform: translateX(-50%);
-    top:5%;
-    margin:5% 0% 5% 0%;
-    border: 1px solid #fff;
-    border-radius: 10px;
+    top:3%;
+    margin:5% 0% 5% 0%;   
+    box-shadow: 0px 10px 13px -7px #000000, 3px 2px 9px 4px rgba(0,0,0,0.26); 
     /*texto*/
     text-align: center;
     text-transform: uppercase;
     color: #ffff;
     padding:3% 0% 2% 0% ;
-    font-family: 'Righteous', cursive;
-  
-
+    font-family: 'Righteous', cursive;   
 }
+
 .formulario .icon  {
     width: 100%;    
     height:auto;  
-    padding:2% ;  
-   
+    padding:1% ;
+    margin: 0% 0% 3% 0%;  
+    position: relative;   
 }
 
- .container .formulario::before {
-    content: '';
-    position:absolute;
-    top :-2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background-color:rgb(94, 108, 109);
+ .formulario::after {
+    content: '';   
+    position: absolute;   
+    top :0%;
+    left: -1%;
+    right: -1%;
+    bottom: 0%;
+    background-color:#fff;
     transform: skew(3deg,3deg);
-    z-index:-1;
-   /* opacity: 55%;*/
-    
+    z-index: -1;
+}
+.formulario:nth-child(1)::after{
+ background:linear-gradient(315deg, rgba(255,0,87,1) 0%, rgba(230,74,25,1));   
+ box-shadow: 0px 10px 13px -7px #000000, 3px 2px 9px 4px rgba(0,0,0,0.26); 
 }
 
 .formulario input {
-    background-color: transparent;
+    background-color:transparent;
+    position: relative;
      width:90%;
      height:40px;
-     margin: 2% 0% 5% 0%;
-     border-radius:8px ;
-     text-align: center;
+     margin: 2% 0% 5% 0%;   
+     border-radius:8px;
+     text-transform: uppercase;
+     text-align: center;     
      color: #fff;
 }
 .formulario button {
+    position: relative;
     width: 90%;
     height:50px;
     margin:5% 0% 0% 0% ;
@@ -84,5 +85,15 @@ body {
 }
 .formulario label {
    letter-spacing:10px ;
+   position: relative;
    
+}
+.formulario label::after
+ {
+    content: '';
+    height: 2px;
+    width:75%;
+    display: block;
+    margin: 5px auto;
+    background-color: #fff;
 }

@@ -8,22 +8,22 @@
         <title>cadastro</title>
     </head>
     <body>
-        <div class="container">
+       
  <div class="formulario">
-          <div class="icon">
+            <div class="icon">
                  <img src="https://img.icons8.com/ios/100/000000/feather.png"/>         
             </div>
             <form method="post" action="cadastrar-usuario.php">
              
             <label for="name">name</label>            
-            <input type="text" required name="name" id="name"/>
+            <input type="text" required name="name" id="name"/>            
             <br/><br/>
 
             <label for="E-mail">E-mail</label>
             <input type="text" required name="E-mail" id="E-mail" />
             <br/><br/>
 
-            <label for="Login">login</label>
+            <label for="login">login</label>
             <input type="text" required name="login" id="login"  />
             <br/><br/>
 
@@ -31,12 +31,12 @@
             <input type="password" required name="password" id="password" />
 
             <label for="password-Confirm">password Confirm</label>
-            <input type="password" required name="Confirm" id="Confirm" />
+            <input type="password" required name="password-Confirm" id="password-Confirm" />
 
             <button type="submit" name="salvar" id="salvar">save</button>
 
         </form>
         </div>
-        </div>
+       
     </body>
 </html>
