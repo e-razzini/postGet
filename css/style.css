@@ -1,3 +1,9 @@
+/*fonts */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+/*end fonts*/
 * {
     padding: 0px;
     margin: 0px;
@@ -9,15 +15,18 @@ body {
     margin: 0px;
     box-sizing: border-box;
 }
+.container {
+    position: relative;
+}
 .formulario {
     position: absolute;
     width: 400px;
     height:auto;    
-    background-color:transparent;
+    background-color:rgb(18, 22, 24);
     left:50%;
     transform: translateX(-50%);
     top:5%;
-    margin:0% 0% 5% 0%;
+    margin:5% 0% 5% 0%;
     border: 1px solid #fff;
     border-radius: 10px;
     /*texto*/
@@ -25,8 +34,31 @@ body {
     text-transform: uppercase;
     color: #ffff;
     padding:3% 0% 2% 0% ;
+    font-family: 'Righteous', cursive;
+  
 
 }
+.formulario .icon  {
+    width: 100%;    
+    height:auto;  
+    padding:2% ;  
+   
+}
+
+ .container .formulario::before {
+    content: '';
+    position:absolute;
+    top :-2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color:rgb(94, 108, 109);
+    transform: skew(3deg,3deg);
+    z-index:-1;
+   /* opacity: 55%;*/
+    
+}
+
 .formulario input {
     background-color: transparent;
      width:90%;
@@ -43,11 +75,14 @@ body {
     border-radius:8px ;
     text-transform: uppercase;
     background-color:transparent ;
+    /*text*/
+    font-family: 'Russo One', sans-serif;
     color: #ffff;
-    letter-spacing:15px;
-    text-decoration:underline;
-    text-align: center;
+    font-size: 20px;
+    letter-spacing: 15px; 
+  
 }
 .formulario label {
    letter-spacing:10px ;
+   
 }

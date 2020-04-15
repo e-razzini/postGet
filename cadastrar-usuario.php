@@ -26,6 +26,9 @@ foreach ($data as $key => $value) {
     <div class="formulario">
 
             <form method="post" action="">
+
+
+           
             <label for="name">name</label>
           <p> <?php  echo $data['name'];?> </p>
             <br/><br/>

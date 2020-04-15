@@ -3,15 +3,19 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">             
         <link rel="stylesheet" href="css/style.css">
         <title>cadastro</title>
     </head>
     <body>
+        <div class="container">
  <div class="formulario">
-
+          <div class="icon">
+                 <img src="https://img.icons8.com/ios/100/000000/feather.png"/>         
+            </div>
             <form method="post" action="cadastrar-usuario.php">
-            <label for="name">name</label>
+             
+            <label for="name">name</label>            
             <input type="text" required name="name" id="name"/>
             <br/><br/>
 
@@ -32,6 +36,7 @@
             <button type="submit" name="salvar" id="salvar">save</button>
 
         </form>
+        </div>
         </div>
     </body>
 </html>
