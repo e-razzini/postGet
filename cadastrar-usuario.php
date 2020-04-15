@@ -1,18 +1,7 @@
 <?php
 
 $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-/*echo $data ['name'];
-echo "<br/>";
-echo $data ['E-mail'];
-echo "<br/>";
-echo $data ['login'];
-echo "<br/>";
-echo $data ['password'];
 
-foreach ($data as $key => $value) {
-    echo "<ul><li><?php echo "$value"?> </li>    </ul>";
-}
-*/
 ?>
 <!DOCTYPE html>
 <html lang="pt-Br">
