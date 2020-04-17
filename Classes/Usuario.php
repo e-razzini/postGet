@@ -37,7 +37,7 @@ class Usuario
         $q->execute();            
     }
 
-    public function editar($nome, $email, $login, $senha )
+    public function editar($codigo,$nome, $email, $login, $senha )
     {
         
         $sql = "UPDATE usuario SET nome=?, email=?, login=?, senha=? where codigo =? ;";

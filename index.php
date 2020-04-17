@@ -2,8 +2,6 @@
 use Classes\Usuario;
 
  require './Classes/Usuario.php';
-
-
     //cria um novo usuario
     $usu = new Usuario();
    $usuario = $usu->listar();

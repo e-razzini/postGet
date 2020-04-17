@@ -4,18 +4,14 @@ require './Classes/Usuario.php';
 $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $param = filter_input_array(INPUT_GET, FILTER_DEFAULT);
 
-if(isset($param['codigo'])){
+if(isset($data['salvar'])){
 
   $usuario = new Usuario(); 
   $usuario->editar($param['codigo'],$data['nome'],$data['email'],$data['login'],$data['senha']);   
-   
-}
-//header("Location:index.php");
+   header("Location:index.php");
 
-/*if (isset($data['salvar'])) {    
-  
 }
-*/
+
 ?>
 <!DOCTYPE html>
     <html>
@@ -51,8 +47,8 @@ if(isset($param['codigo'])){
                 <label for="senha">password</label>
                 <input type="password" required name="senha" id="senha" />
 
-                <label for="password-Confirm">password Confirm</label>
-                <input type="password" required name="password-Confirm" id="senha" />
+                <label for="Confirma">password Confirm</label>
+                <input type="password" required name="Confirma" id="senha" />
 
                 <button type="submit" name="salvar" id="salvar">save</button>
 
