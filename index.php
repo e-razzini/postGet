@@ -1,7 +1,8 @@
 <?php
+use Classes\Usuario;
 
  require './Classes/Usuario.php';
-use Classes\Usuario;
+
 
     //cria um novo usuario
     $usu = new Usuario();
@@ -41,9 +42,9 @@ use Classes\Usuario;
                             <td><?php echo $usuario['email'];?></td>
                             <td><?php echo $usuario['login'];?></td>
                             <td>
-                                <a href="editar.php?codigo=<?php echo $usuario['codigo'];?>&editar"id="editar">Editar</a> |
-                                <a href="eliminar.php?codigo='<?php echo $usuario['codigo'];?>&excluir"id="excluir">Excluir</a>
-
+                                <a href="editar.php?codigo=<?php echo $usuario['codigo'];?>">Editar</a> |
+                                <a href="eliminar.php?codigo=<?php echo $usuario['codigo'];?>">Excluir</a>
+<!--   -->
                             </td>
                         </tr>
 

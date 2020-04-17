@@ -1,24 +1,21 @@
 <?php
-require './Classes/Usuario.php';
-
 use Classes\Usuario;
-
+require './Classes/Usuario.php';
 $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $param = filter_input_array(INPUT_GET, FILTER_DEFAULT);
 
+if(isset($param['codigo'])){
 
-//$param['codigo'];
-$getCod = $_GET['codigo'];
-
-if (isset($data['editar'])) {
-
-// $codigo =$param['codigo'] ;
+  $usuario = new Usuario(); 
+  $usuario->editar($param['codigo'],$data['nome'],$data['email'],$data['login'],$data['senha']);   
    
- $usu->editar($getCod,$data['nome'],$data['email'],$data['login'],$data['senha']);     
 }
-if (isset($data['salvar'])) {    
-    header("Location:index.php");
+//header("Location:index.php");
+
+/*if (isset($data['salvar'])) {    
+  
 }
+*/
 ?>
 <!DOCTYPE html>
     <html>
@@ -37,7 +34,7 @@ if (isset($data['salvar'])) {
                     <img src="https://img.icons8.com/ios/100/000000/feather.png"/>
                 </div>
                 <h2>edit user</h2>
-                <form method="post" action="editar.php">
+                <form method="post" action="editar.php?codigo=<?php echo $param['codigo']?>">
 
                 <label for="nome">name</label>
                 <input type="text" required name="nome" id="nome"/>
