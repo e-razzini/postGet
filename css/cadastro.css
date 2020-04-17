@@ -1,4 +1,3 @@
-/*fonts */
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
@@ -14,16 +13,20 @@ body {
     margin: 0px;
     box-sizing: border-box;
 }
-
+.container {   
+    width: 100vw;
+    height: 80vh;    
+    display: block;
+}
 .formulario {
     position:relative; 
-    width: 400px;
+    width: 800px;
     height:auto;    
     background-color:#0D47A1;
-    left:50%;
-    transform: translateX(-50%);
-    top:3%;
-    margin:3% 0% 3% 0%;   
+    margin-left:auto;
+    margin-right: auto;   
+    margin-top:08%;
+    padding:3% 0% 3% 0%;   
     box-shadow: 0px 10px 13px -7px #000000, 3px 2px 9px 4px rgba(0,0,0,0.26); 
     /*texto*/
     text-align: center;
@@ -33,16 +36,7 @@ body {
     font-family: 'Righteous', cursive;   
 }
 
-.formulario .icon  {
-    width: 100%;    
-    height:auto;  
-    padding:1% ;
-    margin: 0% 0% 3% 0%;  
-    position: relative;   
-}
-
- 
- .formulario form::before {
+ .formulario::before {
     content: '';   
     position: absolute;   
     top :0%;
@@ -53,44 +47,44 @@ body {
     transform: skew(3deg,3deg);
     z-index:-6;
 }
-
-.formulario input {
-    background-color:transparent;
+table {
     position: relative;
-     width:90%;
-     height:40px;
-     margin: 2% 0% 5% 0%;   
-     border-radius:8px;
-     text-transform: uppercase;
-     text-align: center;     
-     color: #fff;
+    width:100%;    
+    height: auto;
+    padding:2% 2% 2% 2%;
+    margin-top:3%;
 }
-.formulario button {
-    position: relative;
-    width: 90%;
-    height:50px;
-    margin:5% 0% 3% 0% ;
-    border-radius:8px ;
-    text-transform: uppercase;
-    background-color:transparent ;
-    /*text*/
-    font-family: 'Russo One', sans-serif;
-    color: #ffff;
-    font-size: 20px;
-    letter-spacing: 15px; 
-  
+td {
+  text-align: center;
+   height: 40px; 
 }
-.formulario label {
-   letter-spacing:10px ;
-   position: relative;
-   
-}
-.formulario label::after
- {
-    content: '';
+td::after {
+    content: "";
     height: 2px;
-    width:75%;
+    width:90%;
     display: block;
     margin: 5px auto;
     background-color: #fff;
+}
+
+.formulario button {
+    position: relative;
+    width: 30%;
+    height:50px;
+    text-align: center;   
+    margin:5% 2% 3% 2% ;
+    border-radius:8px ;
+    text-transform: uppercase;
+    background-color:transparent ;
+    cursor: pointer;
+    font-family: 'Russo One', sans-serif;
+    color: #ffff;
+    font-size:12pxpx;
+    letter-spacing: 10px;   
+}
+.formulario a{
+    color: red;
+    text-shadow: -1px 0px 2px rgba(206,23,4,0.9);
+    position: relative;
+   text-decoration: none;  
 }
