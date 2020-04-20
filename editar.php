@@ -26,9 +26,7 @@ if(isset($data['salvar'])){
         <body>
 
                 <div class="formulario">
-                <div class="icon">
-                    <img src="https://img.icons8.com/ios/100/000000/feather.png"/>
-                </div>
+               
                 <h2>edit user</h2>
                 <form method="post" action="editar.php?codigo=<?php echo $param['codigo']?>">
 
