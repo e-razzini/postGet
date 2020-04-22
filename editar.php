@@ -4,12 +4,12 @@ require './Classes/Usuario.php';
 $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $param = filter_input_array(INPUT_GET, FILTER_DEFAULT);
 
-if(isset($data['salvar'])){
+$usuario = new Usuario();
+$usuAtual = $usuario->getUsuario($param['codigo']);
+if (isset($data['salvar'])) {
 
-  $usuario = new Usuario(); 
-  $usuario->editar($param['codigo'],$data['nome'],$data['email'],$data['login'],$data['senha']);   
-   header("Location:index.php");
-
+    $usuario->editar($param['codigo'], $data['nome'], $data['email'], $data['login'], $data['senha']);
+    header("Location:index.php");
 }
 
 ?>
@@ -21,25 +21,26 @@ if(isset($data['salvar'])){
             <link rel="stylesheet" href="css/style.css">
             <link rel="import" href="">
             <title>cadastro</title>
-    
+
         </head>
         <body>
 
                 <div class="formulario">
-               
+
                 <h2>edit user</h2>
-                <form method="post" action="editar.php?codigo=<?php echo $param['codigo']?>">
+                <form method="post" action="editar.php?codigo=<?php echo $param['codigo'] ?>">
+                <?php foreach($usuAtual as $index => $usuario){ ?>
 
                 <label for="nome">name</label>
-                <input type="text" required name="nome" id="nome"/>
+                <input  value="<?php echo $usuario['nome'];?>" type="text" required name="nome" id="nome"/>
                 <br/><br/>
 
                 <label for="email">E-mail</label>
-                <input type="email" required name="email" id="email" />
+                <input  value="<?php echo $usuario['email'];?>" type="email" required name="email" id="email" />
                 <br/><br/>
 
                 <label for="login">login</label>
-                <input type="text" required name="login" id="login"  />
+                <input  value="<?php echo $usuario['login'];?>" type="text" required name="login" id="login"  />
                 <br/><br/>
 
                 <label for="senha">password</label>
@@ -49,7 +50,7 @@ if(isset($data['salvar'])){
                 <input type="password" required name="Confirma" id="senha" />
 
                 <button type="submit" name="salvar" id="salvar">save</button>
-
+                <?php }?>
             </form>
             </div>
         </body>

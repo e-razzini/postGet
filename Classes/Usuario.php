@@ -25,6 +25,15 @@ class Usuario
         return $q;
     }
 
+    public function getUsuario($codigo){
+       $sql = "SELECT codigo, nome,email,login FROM usuario where 
+       codigo = :codigo;";
+       $q = $this->conexao->prepare($sql);
+       $q->bindParam(1,$codigo);
+       $q->execute();          
+       return $q;
+    }
+
     public function inserir($nome, $email, $login, $senha)
     {
         $sql = "INSERT INTO usuario (nome,email,login,senha) values (?,?,?,?);";
